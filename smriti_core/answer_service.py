@@ -90,7 +90,8 @@ def _evidence_for(question, language):
         if topic not in topics and any(key in value if ' ' in key else key in tokens for key in topic['keywords']):
             topics.append(topic)
     ids={rid for topic in topics for rid in topic['records']}
-    ids.update(record['id'] for record in RECORDS if normalize(record['title']) in value)
+    ids.update(record['id'] for record in RECORDS
+               if normalize(record['title'].split(':')[0]) in value)
     if not ids:return EVIDENCE
     return {'records':[record for record in EVIDENCE['records'] if record['id'] in ids],
             'guide_notes':[note for note in EVIDENCE['guide_notes'] if set(note['record_ids'])<=ids],

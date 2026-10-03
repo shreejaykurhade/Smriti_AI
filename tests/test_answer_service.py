@@ -138,3 +138,5 @@ def test_compound_query_keeps_both_topic_sources_and_unknown_uses_all_records():
     ids={record['id'] for record in evidence['records']}
     assert {'annihilation-caste','problem-rupee'}<=ids
     assert len(service._evidence_for('Unrecognised request.','mr')['records'])==13
+    comparison=service._evidence_for('Compare Castes in India with Waiting for a Visa.','mr')
+    assert {'castes-india','waiting-visa'}<={record['id'] for record in comparison['records']}
