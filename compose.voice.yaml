@@ -1,0 +1,14 @@
+services:
+  voice:
+    build:
+      context: .
+      dockerfile: speech_service/Dockerfile
+    env_file: speech_service/.env
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - ./models:/models
+      - ./.audio-cache:/audio-cache
+    restart: unless-stopped
+    # NVIDIA deployment: set SMRITI_DEVICE=cuda and uncomment after installing NVIDIA Container Toolkit.
+    # gpus: all

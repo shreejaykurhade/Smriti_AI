@@ -1,0 +1,132 @@
+[
+  {
+    "id": "democracy",
+    "question": "What did Ambedkar mean by social democracy?",
+    "keywords": [
+      "social democracy",
+      "democracy",
+      "fraternity",
+      "liberty",
+      "equality"
+    ],
+    "records": [
+      "constitution-speech"
+    ],
+    "answer": "In his speech on 25 November 1949, Dr. Ambedkar said that political democracy needs social democracy. He described it as a way of life rooted in liberty, equality and fraternity. He warned that these principles belong together. The original passage is on printed page 979 of the Assembly debate."
+  },
+  {
+    "id": "caste",
+    "question": "Why did Ambedkar criticise caste?",
+    "keywords": [
+      "caste",
+      "annihilation",
+      "untouchability",
+      "discrimination",
+      "shudras"
+    ],
+    "records": [
+      "annihilation-caste",
+      "castes-india",
+      "waiting-visa"
+    ],
+    "answer": "Dr. Ambedkar examined how caste separates people and restricts social life. In Castes in India, he studied marriage within the same caste. In Annihilation of Caste, he challenged the foundations of caste. Waiting for a Visa records experiences of untouchability. These are different kinds of evidence: an academic essay, a public argument and personal recollections."
+  },
+  {
+    "id": "rights",
+    "question": "What constitutional safeguards did he propose?",
+    "keywords": [
+      "constitutional safeguards",
+      "safeguards",
+      "minorities",
+      "minority",
+      "rights",
+      "constitution"
+    ],
+    "records": [
+      "states-minorities",
+      "constitution-speech"
+    ],
+    "answer": "In States and Minorities, Dr. Ambedkar set out proposals for constitutional protection of the Scheduled Castes and minorities, alongside economic safeguards. This memorandum contains his proposals; it should not be treated as the final Constitution. His closing Assembly speech explains his concerns about constitutional methods and the future of democracy."
+  },
+  {
+    "id": "buddhism",
+    "question": "How did Buddhism shape his final work?",
+    "keywords": [
+      "buddhism",
+      "buddha",
+      "dhamma",
+      "dharma"
+    ],
+    "records": [
+      "buddha-dhamma"
+    ],
+    "answer": "In The Buddha and His Dhamma, Dr. Ambedkar discusses the life and teaching of the Buddha. It brings questions of ethical conduct and social relations into the discussion of Dhamma. The work was published after his death. You can open the official edition and follow the argument in his own words."
+  },
+  {
+    "id": "economics",
+    "question": "What did Ambedkar write about the rupee?",
+    "keywords": [
+      "rupee",
+      "currency",
+      "economics",
+      "monetary",
+      "exchange",
+      "finance"
+    ],
+    "records": [
+      "problem-rupee"
+    ],
+    "answer": "Dr. Ambedkar’s The Problem of the Rupee was first published in 1923. It examines Indian currency and exchange policy. His preface places the work within a proposed history of Indian currency and banking. The official collection includes this book in Volume 6, alongside his other economic writings."
+  },
+  {
+    "id": "federalism",
+    "question": "What were his ideas on linguistic states?",
+    "keywords": [
+      "linguistic",
+      "language states",
+      "federalism",
+      "federation",
+      "state reorganisation"
+    ],
+    "records": [
+      "linguistic-states",
+      "federation-freedom"
+    ],
+    "answer": "In Thoughts on Linguistic States, Dr. Ambedkar examined state reorganisation and the balance of political power. Federation versus Freedom is an earlier address on the proposed federal structure. Reading the two together shows how he examined constitutional arrangements in different political settings. Both appear in Volume 1 of the official collection."
+  },
+  {
+    "id": "women",
+    "question": "How did Ambedkar work for women’s rights?",
+    "keywords": [
+      "women",
+      "woman",
+      "hindu code",
+      "marriage",
+      "adoption",
+      "inheritance"
+    ],
+    "records": [
+      "hindu-code"
+    ],
+    "answer": "Dr. Ambedkar’s work on the Hindu Code Bill addressed reform of personal law, including marriage, property and adoption. Volume 14, Part 2 of his collected writings preserves the legislative material. It is a scanned edition in this archive, so the original PDF is the reference for the detailed debates."
+  },
+  {
+    "id": "overview",
+    "question": "Where should I start with Ambedkar’s work?",
+    "keywords": [
+      "start",
+      "introduction",
+      "overview",
+      "legacy",
+      "contributions",
+      "contribution",
+      "society"
+    ],
+    "records": [
+      "annihilation-caste",
+      "constitution-speech",
+      "problem-rupee"
+    ],
+    "answer": "A useful starting point is to read Dr. Ambedkar across three areas: caste, democracy and economics. Annihilation of Caste challenges caste. His closing Assembly speech discusses liberty, equality and fraternity. The Problem of the Rupee examines currency policy. Each source opens a different part of his public and intellectual work."
+  }
+]

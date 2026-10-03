@@ -1,0 +1,16 @@
+.venv
+.uv-cache
+.uv-python
+.npm-cache
+models
+.audio-cache
+.pytest_cache
+speech_service
+scripts
+tests
+*.zip
+eng.traineddata
+
+.next-preview
+
+.source-downloads/

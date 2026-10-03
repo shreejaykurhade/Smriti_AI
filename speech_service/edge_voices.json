@@ -1,0 +1,137 @@
+[
+  {
+    "name": "bn-IN-BashkarNeural",
+    "locale": "bn-IN",
+    "gender": "Male"
+  },
+  {
+    "name": "bn-IN-TanishaaNeural",
+    "locale": "bn-IN",
+    "gender": "Female"
+  },
+  {
+    "name": "en-IN-NeerjaExpressiveNeural",
+    "locale": "en-IN",
+    "gender": "Female"
+  },
+  {
+    "name": "en-IN-NeerjaNeural",
+    "locale": "en-IN",
+    "gender": "Female"
+  },
+  {
+    "name": "en-IN-PrabhatNeural",
+    "locale": "en-IN",
+    "gender": "Male"
+  },
+  {
+    "name": "gu-IN-DhwaniNeural",
+    "locale": "gu-IN",
+    "gender": "Female"
+  },
+  {
+    "name": "gu-IN-NiranjanNeural",
+    "locale": "gu-IN",
+    "gender": "Male"
+  },
+  {
+    "name": "hi-IN-MadhurNeural",
+    "locale": "hi-IN",
+    "gender": "Male"
+  },
+  {
+    "name": "hi-IN-SwaraNeural",
+    "locale": "hi-IN",
+    "gender": "Female"
+  },
+  {
+    "name": "kn-IN-GaganNeural",
+    "locale": "kn-IN",
+    "gender": "Male"
+  },
+  {
+    "name": "kn-IN-SapnaNeural",
+    "locale": "kn-IN",
+    "gender": "Female"
+  },
+  {
+    "name": "ml-IN-MidhunNeural",
+    "locale": "ml-IN",
+    "gender": "Male"
+  },
+  {
+    "name": "ml-IN-SobhanaNeural",
+    "locale": "ml-IN",
+    "gender": "Female"
+  },
+  {
+    "name": "mr-IN-AarohiNeural",
+    "locale": "mr-IN",
+    "gender": "Female"
+  },
+  {
+    "name": "mr-IN-ManoharNeural",
+    "locale": "mr-IN",
+    "gender": "Male"
+  },
+  {
+    "name": "ne-NP-HemkalaNeural",
+    "locale": "ne-NP",
+    "gender": "Female"
+  },
+  {
+    "name": "ne-NP-SagarNeural",
+    "locale": "ne-NP",
+    "gender": "Male"
+  },
+  {
+    "name": "si-LK-SameeraNeural",
+    "locale": "si-LK",
+    "gender": "Male"
+  },
+  {
+    "name": "si-LK-ThiliniNeural",
+    "locale": "si-LK",
+    "gender": "Female"
+  },
+  {
+    "name": "ta-IN-PallaviNeural",
+    "locale": "ta-IN",
+    "gender": "Female"
+  },
+  {
+    "name": "ta-IN-ValluvarNeural",
+    "locale": "ta-IN",
+    "gender": "Male"
+  },
+  {
+    "name": "te-IN-MohanNeural",
+    "locale": "te-IN",
+    "gender": "Male"
+  },
+  {
+    "name": "te-IN-ShrutiNeural",
+    "locale": "te-IN",
+    "gender": "Female"
+  },
+  {
+    "name": "ur-IN-GulNeural",
+    "locale": "ur-IN",
+    "gender": "Female"
+  },
+  {
+    "name": "ur-IN-SalmanNeural",
+    "locale": "ur-IN",
+    "gender": "Male"
+  },
+  {
+    "name": "ur-PK-AsadNeural",
+    "locale": "ur-PK",
+    "gender": "Male"
+  },
+  {
+    "name": "ur-PK-UzmaNeural",
+    "locale": "ur-PK",
+    "gender": "Female"
+  }
+]

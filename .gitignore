@@ -6,3 +6,20 @@ __pycache__/
 *.pyc
 
 .vercel
+.venv/
+.uv-cache/
+.uv-python/
+.npm-cache/
+models/
+.audio-cache/
+.pytest_cache/
+*.tsbuildinfo
+!.env.example
+!speech_service/.env.example
+
+.next-preview/
+.preview-stop-*
+
+.locale-progress-*.json
+
+.source-downloads/

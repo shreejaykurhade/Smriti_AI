@@ -1,0 +1,602 @@
+[
+  {
+    "id": "Volume1.pdf",
+    "title": "Volume 1",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/Volume1.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "English",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "Volume2.pdf",
+    "title": "Volume 2",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/Volume2.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "English",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "Volume3.pdf",
+    "title": "Volume 3",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/Volume3.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "English",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "Volume4.pdf",
+    "title": "Volume 4",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/Volume4.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "English",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "Volume5.pdf",
+    "title": "Volume 5",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/Volume5.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "English",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "Volume6.pdf",
+    "title": "Volume 6",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/Volume6.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "English",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "Volume7.pdf",
+    "title": "Volume 7",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/Volume7.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "English",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "Volume8.pdf",
+    "title": "Volume 8",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/Volume8.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "English",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "Volume9.pdf",
+    "title": "Volume 9",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/Volume9.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "English",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "Volume10.pdf",
+    "title": "Volume 10",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/Volume10.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "English",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "Volume11.pdf",
+    "title": "Volume 11",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/Volume11.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "English",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "Volume12.pdf",
+    "title": "Volume 12",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/Volume12.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "English",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "Volume13.pdf",
+    "title": "Volume 13",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/Volume13.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "English",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "Volume14_Part_I.pdf",
+    "title": "Volume 14 \u00b7 Part I",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/Volume14_Part_I.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "English",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "Volume14_Part_II.pdf",
+    "title": "Volume 14 \u00b7 Part II",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/Volume14_Part_II.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "English",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "Volume15.pdf",
+    "title": "Volume 15",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/Volume15.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "English",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "Volume16.pdf",
+    "title": "Volume 16",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/Volume16.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "English",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "Volume17_Part_I.pdf",
+    "title": "Volume 17 \u00b7 Part I",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/Volume17_Part_I.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "English",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "Volume17_Part_II.pdf",
+    "title": "Volume 17 \u00b7 Part II",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/Volume17_Part_II.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "English",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "Volume17_Part_III.pdf",
+    "title": "Volume 17 \u00b7 Part III",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/Volume17_Part_III.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "English",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "VolumeH1.pdf",
+    "title": "Volume 1",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/VolumeH1.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "Hindi",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "VolumeH2.pdf",
+    "title": "Volume 2",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/VolumeH2.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "Hindi",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "VolumeH3.pdf",
+    "title": "Volume 3",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/VolumeH3.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "Hindi",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "VolumeH4.pdf",
+    "title": "Volume 4",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/VolumeH4.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "Hindi",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "VolumeH5.pdf",
+    "title": "Volume 5",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/VolumeH5.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "Hindi",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "VolumeH6.pdf",
+    "title": "Volume 6",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/VolumeH6.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "Hindi",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "VolumeH7.pdf",
+    "title": "Volume 7",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/VolumeH7.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "Hindi",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "VolumeH8.pdf",
+    "title": "Volume 8",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/VolumeH8.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "Hindi",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "VolumeH9.pdf",
+    "title": "Volume 9",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/VolumeH9.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "Hindi",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "VolumeH10.pdf",
+    "title": "Volume 10",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/VolumeH10.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "Hindi",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "VolumeH11.pdf",
+    "title": "Volume 11",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/VolumeH11.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "Hindi",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "VolumeH12.pdf",
+    "title": "Volume 12",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/VolumeH12.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "Hindi",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "VolumeH13.pdf",
+    "title": "Volume 13",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/VolumeH13.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "Hindi",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "VolumeH14.pdf",
+    "title": "Volume 14",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/VolumeH14.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "Hindi",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "VolumeH15.pdf",
+    "title": "Volume 15",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/VolumeH15.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "Hindi",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "VolumeH16.pdf",
+    "title": "Volume 16",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/VolumeH16.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "Hindi",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "VolumeH17.pdf",
+    "title": "Volume 17",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/VolumeH17.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "Hindi",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "VolumeH18.pdf",
+    "title": "Volume 18",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/VolumeH18.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "Hindi",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "VolumeH19.pdf",
+    "title": "Volume 19",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/VolumeH19.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "Hindi",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "VolumeH20.pdf",
+    "title": "Volume 20",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/VolumeH20.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "Hindi",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "VolumeH21.pdf",
+    "title": "Volume 21",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/VolumeH21.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "Hindi",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "VolumeH22.pdf",
+    "title": "Volume 22",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/VolumeH22.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "Hindi",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "VolumeH23.pdf",
+    "title": "Volume 23",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/VolumeH23.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "Hindi",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "VolumeH24.pdf",
+    "title": "Volume 24",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/VolumeH24.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "Hindi",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "VolumeH25.pdf",
+    "title": "Volume 25",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/VolumeH25.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "Hindi",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "VolumeH26.pdf",
+    "title": "Volume 26",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/VolumeH26.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "Hindi",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "VolumeH27.pdf",
+    "title": "Volume 27",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/VolumeH27.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "Hindi",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "VolumeH28.pdf",
+    "title": "Volume 28",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/VolumeH28.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "Hindi",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "VolumeH29.pdf",
+    "title": "Volume 29",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/VolumeH29.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "Hindi",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "VolumeH30.pdf",
+    "title": "Volume 30",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/VolumeH30.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "Hindi",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "VolumeH31.pdf",
+    "title": "Volume 31",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/VolumeH31.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "Hindi",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "VolumeH32.pdf",
+    "title": "Volume 32",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/VolumeH32.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "Hindi",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "VolumeH33.pdf",
+    "title": "Volume 33",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/VolumeH33.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "Hindi",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "VolumeH34.pdf",
+    "title": "Volume 34",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/VolumeH34.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "Hindi",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "VolumeH35.pdf",
+    "title": "Volume 35",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/VolumeH35.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "Hindi",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "VolumeH36.pdf",
+    "title": "Volume 36",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/VolumeH36.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "Hindi",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "VolumeH37.pdf",
+    "title": "Volume 37",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/VolumeH37.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "Hindi",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "VolumeH38.pdf",
+    "title": "Volume 38",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/VolumeH38.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "Hindi",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "VolumeH39.pdf",
+    "title": "Volume 39",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/VolumeH39.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "Hindi",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  },
+  {
+    "id": "VolumeH40.pdf",
+    "title": "Volume 40",
+    "pdfUrl": "https://www.mea.gov.in/images/CPV/VolumeH40.pdf",
+    "sourceUrl": "https://www.mea.gov.in/books-writings-of-ambedkar.htm",
+    "language": "Hindi",
+    "host": "Ministry of External Affairs",
+    "verifiedAt": "2026-10-03",
+    "httpStatus": 206
+  }
+]
