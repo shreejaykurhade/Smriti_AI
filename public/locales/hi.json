@@ -712,5 +712,10 @@
   "Editorial note: the chronology focuses on activity and writing during Ambedkar’s lifetime. Posthumous publication is explicitly labelled. Dates and summaries link to official collected editions, Parliament’s original debates and Columbia University’s biographical chronology. Image credits are separate from historical sources.": "संपादकीय नोटः कालक्रम अंबेडकर के जीवनकाल के दौरान गतिविधि और लेखन पर केंद्रित है। मरणोपरांत प्रकाशन स्पष्ट रूप से लेबल किया गया है। तिथियां और सारांश आधिकारिक संग्रहित संस्करणों, संसद की मूल बहस और कोलंबिया विश्वविद्यालय की जीवनी कालक्रम से जुड़े हैं। छवि क्रेडिट ऐतिहासिक स्रोतों से अलग हैं।",
   "Curated guide summary. Verify interpretation against the linked original documents.": "यह मार्गदर्शक सारांश है। अर्थ और संदर्भ की पुष्टि के लिए जुड़े हुए मूल दस्तावेज़ पढ़ें।",
   "Ask a question. Hear a calm, source-linked answer.": "प्रश्न पूछें। मूल संदर्भों के साथ शांत उत्तर सुनें।",
-  "Close record": "अभिलेख बंद करें"
+  "Close record": "अभिलेख बंद करें",
+  "No speech was heard. Please try again.": "आवाज़ सुनाई नहीं दी। कृपया दोबारा प्रयास करें।",
+  "Browser voice input uses your browser’s speech service.": "बोलकर प्रश्न पूछने के लिए आपके ब्राउज़र की आवाज़ पहचानने वाली सेवा का उपयोग होता है।",
+  "Voice input is not supported in this browser. You can type your question.": "इस ब्राउज़र में बोलकर प्रश्न नहीं पूछ सकते। आप प्रश्न टाइप कर सकते हैं।",
+  "Voice input is unavailable for this language in your browser. You can type your question.": "आपके ब्राउज़र में इस भाषा की आवाज़ पहचान उपलब्ध नहीं है। आप प्रश्न टाइप कर सकते हैं।",
+  "This passage is available in its original language. Choose a ready voice answer for translated narration.": "यह अंश मूल भाषा में उपलब्ध है। अनुवादित कथावाचन सुनने के लिए तैयार प्रश्न चुनें।"
 }

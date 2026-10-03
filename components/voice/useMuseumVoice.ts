@@ -1,9 +1,16 @@
 'use client';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { narrationSegments } from './narration';
+import {browserRecognitionConstructor, startBrowserDictation} from './browserRecognition';
+import previewClips from './preview-manifest.json';
 
 export type MuseumSpeaker = {id:string;gender:string;name:string;provider:string;online:boolean;experimental?:boolean};
-export type VoiceCapabilities = {voices?:Record<string,MuseumSpeaker[]>;tts:boolean;stt:boolean;translation:boolean;translation_languages?:string[];tts_languages:string[];stt_languages:string[];styles:string[];voice_label?:string;online_voice?:boolean};
+export type VoiceCapabilities = {mode?:string;browser_input_languages?:string[];prepared_languages?:string[];voices?:Record<string,MuseumSpeaker[]>;tts:boolean;stt:boolean;translation:boolean;translation_languages?:string[];tts_languages:string[];stt_languages:string[];styles:string[];voice_label?:string;online_voice?:boolean};
+function deviceCapabilities(data:VoiceCapabilities):VoiceCapabilities {
+  if(data.mode!=='serverless')return data;
+  const supported=Boolean(browserRecognitionConstructor());
+  return {...data,stt:supported,stt_languages:supported?data.browser_input_languages||[]:[]};
+}
 export type ArchiveAnswer = {answer:string;citations:{number:number;id:string;title:string;source:string}[];language:string;spoken_text?:string};
 async function api(path:string,options?:RequestInit){
   const response=await fetch(`/api/voice/${path}`,options);
@@ -52,18 +59,19 @@ export function useMuseumVoice(language:string,onTranscript:(text:string,submit?
   const audio=useRef<HTMLAudioElement|null>(null);const audioUrl=useRef('');const socket=useRef<WebSocket|null>(null);
   const playback=useRef<AudioContext|null>(null);const sources=useRef<AudioBufferSourceNode[]>([]);const schedule=useRef(0);const accepting=useRef(true);
   const capture=useRef<{stream:MediaStream;context:AudioContext;node:AudioWorkletNode;parts:Int16Array[];timer:ReturnType<typeof setTimeout>}|null>(null);
+  const browserCapture=useRef<ReturnType<typeof startBrowserDictation>|null>(null);
   const stopSound=useCallback(()=>{
     controller.current?.abort();controller.current=null;generation.current++;
     audio.current?.pause();audio.current=null;if(audioUrl.current)URL.revokeObjectURL(audioUrl.current);audioUrl.current='';
     for(const source of sources.current){try{source.stop();}catch{}}sources.current=[];schedule.current=0;accepting.current=false;
     setSpeaking(false);setBusy(false);
   },[]);
-  const releaseMic=useCallback(()=>{const mic=capture.current;if(!mic)return;capture.current=null;clearTimeout(mic.timer);mic.stream.getTracks().forEach(track=>track.stop());mic.node.disconnect();void mic.context.close();setRecording(false);},[]);
+  const releaseMic=useCallback(()=>{browserCapture.current?.cancel();browserCapture.current=null;const mic=capture.current;if(mic){capture.current=null;clearTimeout(mic.timer);mic.stream.getTracks().forEach(track=>track.stop());mic.node.disconnect();void mic.context.close();}setRecording(false);},[]);
   const disconnect=useCallback(()=>{stopSound();releaseMic();socket.current?.close();socket.current=null;void playback.current?.close();playback.current=null;setLive(false);callbacks.current.onVoiceError();},[stopSound,releaseMic]);
   useEffect(()=>{try{const saved=JSON.parse(localStorage.getItem('smriti-voice-preferences')||'{}');if(['auto','female','male','original'].includes(saved.gender))setGender(saved.gender);if(['museum','conversation','calm'].includes(saved.style))setStyle(saved.style);if(typeof saved.autoSpeak==='boolean')setAutoSpeak(saved.autoSpeak);}catch{}setPreferencesReady(true);},[]);
   useEffect(()=>{if(preferencesReady)try{localStorage.setItem('smriti-voice-preferences',JSON.stringify({gender,style,autoSpeak}));}catch{}},[gender,style,autoSpeak,preferencesReady]);
-  const refreshCapabilities=useCallback(async()=>{try{const data=await (await api('capabilities')).json();setCapabilities(data);setStatus('Voice availability updated.');}catch{setStatus('The voice service could not be reached. The website translation still works.');}},[]);
-  useEffect(()=>{let active=true;api('capabilities').then(r=>r.json()).then(data=>{if(active)setCapabilities(data);}).catch(error=>{if(active)setStatus(error.message);});return()=>{active=false;};},[]);
+  const refreshCapabilities=useCallback(async()=>{try{const data=await (await api('capabilities')).json();setCapabilities(deviceCapabilities(data));setStatus('Voice availability updated.');}catch{setStatus('The voice service could not be reached. The website translation still works.');}},[]);
+  useEffect(()=>{let active=true;api('capabilities').then(r=>r.json()).then(data=>{if(active)setCapabilities(deviceCapabilities(data));}).catch(error=>{if(active)setStatus(error.message);});return()=>{active=false;};},[]);
   useEffect(()=>{disconnect();setStatus('');return disconnect;},[language,style,gender,effectiveGender,selectedVoice?.id,disconnect]);
   const narrate=useCallback(async(text:string,sourceLanguage=language)=>{
     if(!capabilities?.tts_languages.includes(language)){setStatus('No installed voice for this language. You can still read the translated answer.');return;}
@@ -73,10 +81,24 @@ export function useMuseumVoice(language:string,onTranscript:(text:string,submit?
       // Translate before splitting: otherwise translated clause boundaries change
       // between individual model calls. Research answers already arrive translated.
       let nativeText=text;
-      if(sourceLanguage!==language){const result=await voiceJob({kind:'translate',texts:[text],source_language:sourceLanguage,language},abort.signal);nativeText=result.translations[0];}
+      if(sourceLanguage!==language){
+        if(capabilities.mode==='serverless'){
+          const pack=await (await fetch(`/locales/${language}.json`,{signal:abort.signal})).json();
+          if(!pack[text])throw new Error('This passage is available in its original language. Choose a ready voice answer for translated narration.');
+          nativeText=pack[text];
+        }else{const result=await voiceJob({kind:'translate',texts:[text],source_language:sourceLanguage,language},abort.signal);nativeText=result.translations[0];}
+      }
       const segments=narrationSegments(nativeText);
       if(!segments.length)throw new Error('No text to narrate.');
       const prepare=async(passage:string)=>{
+        if(capabilities.mode==='serverless'){
+          const clip=style==='museum'?previewClips.find(item=>item.text===passage&&item.voice_id===selectedVoice?.id):undefined;
+          if(clip){
+            const response=await fetch(`/voice/${clip.file}`,{signal:abort.signal});
+            if(response.ok)return response.blob();
+          }
+          return (await api('narrate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({text:passage,language,style,gender:effectiveGender}),signal:abort.signal})).blob();
+        }
         const result=await voiceJob({kind:'narrate',text:passage,language,source_language:language,style,gender:effectiveGender},abort.signal);
         return (await api(`jobs/${result.id}/audio`,{signal:abort.signal})).blob();
       };
@@ -97,17 +119,22 @@ export function useMuseumVoice(language:string,onTranscript:(text:string,submit?
           element.onended=()=>{cleanup();resolve();};
           element.onerror=()=>{cleanup();reject(new Error('Audio playback failed. Try Listen again.'));};
           void element.play().then(()=>{if(ticket===generation.current){setSpeaking(true);setBusy(false);setStatus('Museum guide is speaking.');}})
-            .catch(()=>{if(!abort.signal.aborted)setStatus('Audio is ready. Tap Play narration to listen.');});
+            .catch(()=>{if(!abort.signal.aborted){setBusy(false);setStatus('Audio is ready. Tap Play narration to listen.');}});
         });
         if(next)pending=next;
       }
       if(ticket===generation.current){setSpeaking(false);setStatus('Narration finished.');}
     }catch(error){if(!abort.signal.aborted)setStatus(error instanceof Error?error.message:'Narration failed.');}
     finally{if(ticket===generation.current)setBusy(false);}
-  },[language,style,effectiveGender,stopSound,capabilities]);
-  const resume=async()=>{try{await audio.current?.play();setSpeaking(true);setStatus('Museum guide is speaking.');}catch{setStatus('Tap Listen to try playback again.');}};
+  },[language,style,effectiveGender,selectedVoice?.id,stopSound,capabilities]);
+  const resume=async()=>{if(!audio.current)return;try{await audio.current.play();setSpeaking(true);setBusy(false);setStatus('Museum guide is speaking.');}catch{setStatus('Tap Listen to try playback again.');}};
   const startLive=async()=>{
     disconnect();setBusy(true);setStatus('Connecting museum guide…');const ticket=generation.current;
+    if(capabilities?.mode==='serverless'){
+      setBusy(false);
+      if(!capabilities.stt||!capabilities.stt_languages.includes(language)){setStatus('Voice input is not supported in this browser. You can type your question.');return false;}
+      setLive(true);setStatus('Live guide connected. Tap the microphone to ask; tap again to send.');return true;
+    }
     try{
       // Create the audio context during the button gesture to satisfy mobile autoplay rules.
       playback.current=new AudioContext();await playback.current.resume();
@@ -153,6 +180,23 @@ export function useMuseumVoice(language:string,onTranscript:(text:string,submit?
     }catch(error){if(!abort.signal.aborted)setStatus(error instanceof Error?error.message:'Transcription failed.');}finally{if(ticket===generation.current)setBusy(false);}
   };
   const toggleRecording=async()=>{
+    if(capabilities?.mode==='serverless'){
+      if(browserCapture.current){browserCapture.current.stop();return;}
+      const Constructor=browserRecognitionConstructor();
+      if(!Constructor||!capabilities.stt_languages.includes(language)){setStatus('Voice input is not supported in this browser. You can type your question.');return;}
+      stopSound();const ticket=generation.current;
+      setStatus('Allow microphone access, then ask your question.');
+      try{
+        browserCapture.current=startBrowserDictation(Constructor,language,{
+          start:()=>{if(ticket===generation.current){setRecording(true);setStatus('Listening… Tap the microphone again to send. Maximum 30 seconds.');}},
+          complete:text=>{if(ticket!==generation.current)return;browserCapture.current=null;setRecording(false);setBusy(false);if(text){setStatus('Question transcribed.');callbacks.current.onTranscript(text);}else setStatus('No speech was heard. Please try again.');},
+          error:reason=>{if(ticket!==generation.current)return;browserCapture.current=null;setRecording(false);setBusy(false);setLive(false);callbacks.current.onVoiceError();
+            if(reason==='language-not-supported')setCapabilities(previous=>previous?{...previous,stt_languages:previous.stt_languages.filter(code=>code!==language)}:previous);
+            setStatus(reason==='no-speech'?'No speech was heard. Please try again.':reason==='language-not-supported'?'Voice input is unavailable for this language in your browser. You can type your question.':'Microphone access was not available. Use HTTPS and allow the microphone, or type your question.');},
+        });
+      }catch{setRecording(false);setStatus('Voice input is not supported in this browser. You can type your question.');}
+      return;
+    }
     if(capture.current){await finishRecording();return;}
     stopSound();setStatus('Allow microphone access, then ask your question.');
     const ticket=generation.current;
@@ -167,5 +211,5 @@ export function useMuseumVoice(language:string,onTranscript:(text:string,submit?
       setRecording(true);setStatus('Listening… Tap the microphone again to send. Maximum 30 seconds.');
     }catch{releaseMic();setStatus('Microphone access was not available. Use HTTPS and allow the microphone, or type your question.');}
   };
-  return {capabilities,status,setStatus,speaking,busy,recording,live,style,setStyle,gender,setGender,voices,selectedVoice,effectiveGender,refreshCapabilities,autoSpeak,setAutoSpeak,narrate,stop:()=>socket.current?disconnect():stopSound(),disconnect,toggleRecording,startLive,resume};
+  return {capabilities,status,setStatus,speaking,busy,recording,live,style,setStyle,gender,setGender,voices,selectedVoice,effectiveGender,refreshCapabilities,autoSpeak,setAutoSpeak,narrate,stop:()=>socket.current||browserCapture.current?disconnect():stopSound(),disconnect,toggleRecording,startLive,resume};
 }

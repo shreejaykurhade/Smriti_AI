@@ -1,0 +1,402 @@
+[
+  {
+    "file": "preview-v2-en-female-0.mp3",
+    "language": "en",
+    "gender": "female",
+    "voice_id": "en-IN-NeerjaExpressiveNeural",
+    "text": "Welcome to SMRITI AI.",
+    "sha256": "10455f51b5c1a3cd5f9b1bff570474f0a1d8e469f5279b7597d79d6fdae047e3",
+    "preset_version": "calm-guide-v2",
+    "source_sha256": "b7b40730ca0e509e9e2816170c94d2d40ac0c13ed85384d8d8704b80c4634ba7"
+  },
+  {
+    "file": "preview-v2-en-female-1.mp3",
+    "language": "en",
+    "gender": "female",
+    "voice_id": "en-IN-NeerjaExpressiveNeural",
+    "text": "Let us explore Dr. B. R. Ambedkar’s ideas together.",
+    "sha256": "12f493fcfb83a2d3de8a5dc0deb269a6d43be348a16861a7bc6ae475571d7e03",
+    "preset_version": "calm-guide-v2",
+    "source_sha256": "069c3c16ad69cbf326a5cf174fcb537ce5aad30bd22fce37e016abffd327a2ae"
+  },
+  {
+    "file": "preview-v2-en-male-0.mp3",
+    "language": "en",
+    "gender": "male",
+    "voice_id": "en-IN-PrabhatNeural",
+    "text": "Welcome to SMRITI AI.",
+    "sha256": "f56d8a6617a983f2b5a029de76d4b59fc04722d9c253aad8f49590b233eeafa6",
+    "preset_version": "calm-guide-v2",
+    "source_sha256": "331482dc79abc8c06ee874ef136f55822a098c775b2604656677ca77843f6406"
+  },
+  {
+    "file": "preview-v2-en-male-1.mp3",
+    "language": "en",
+    "gender": "male",
+    "voice_id": "en-IN-PrabhatNeural",
+    "text": "Let us explore Dr. B. R. Ambedkar’s ideas together.",
+    "sha256": "8ba9b479a3fbcfb0cf68800de15fb8511136693e5af8f1ef1b4cd3022ce9f6ad",
+    "preset_version": "calm-guide-v2",
+    "source_sha256": "adfdf15d673fd9c6e760f9f50c5ebb095a033d77700dca06216b991599790f4b"
+  },
+  {
+    "file": "preview-v2-bn-female-0.mp3",
+    "language": "bn",
+    "gender": "female",
+    "voice_id": "bn-IN-TanishaaNeural",
+    "text": "স্মৃতি এআই-তে স্বাগতম, আসুন আমরা একসঙ্গে ডঃ বি.আর. আম্বেদকারের ধারণা নিয়ে আলোচনা করি।",
+    "sha256": "5da6e8478ab29a81f607201232ff14d5af1f791c0b127913219409ebea07441d",
+    "preset_version": "calm-guide-v2",
+    "source_sha256": "61d3ba2a299aba44bbf1c348de380b4df22f0441ae4b75726c42925b1da340a9"
+  },
+  {
+    "file": "preview-v2-bn-male-0.mp3",
+    "language": "bn",
+    "gender": "male",
+    "voice_id": "bn-IN-BashkarNeural",
+    "text": "স্মৃতি এআই-তে স্বাগতম, আসুন আমরা একসঙ্গে ডঃ বি.আর. আম্বেদকারের ধারণা নিয়ে আলোচনা করি।",
+    "sha256": "3f7395eb52632a91b14e0ae49824c91c155e35cae520aea6fa0f681acc41aa29",
+    "preset_version": "calm-guide-v2",
+    "source_sha256": "5d67f68147a3ce86136f3d510044cfcc3ce40fc4290d8bd072fa77dbe2870ab4"
+  },
+  {
+    "file": "preview-v2-gu-female-0.mp3",
+    "language": "gu",
+    "gender": "female",
+    "voice_id": "gu-IN-DhwaniNeural",
+    "text": "સ્મૃતિ એઆઈમાં આપનું સ્વાગત છે.",
+    "sha256": "4d7baf2e16e7e274c417e1181b93019e45f83a008e5b64e7ce05e3527c82e448",
+    "preset_version": "calm-guide-v2",
+    "source_sha256": "ac79aa2535c3a367937f938977ce166a8dee99b34fc0b996184bb3be01d47bf4"
+  },
+  {
+    "file": "preview-v2-gu-female-1.mp3",
+    "language": "gu",
+    "gender": "female",
+    "voice_id": "gu-IN-DhwaniNeural",
+    "text": "ચાલો આપણે સાથે મળીને ડૉ. બી. આર. આંબેડકરના વિચારોનો અભ્યાસ કરીએ.",
+    "sha256": "7d1d072865fda13ecee5e4d0ae7e7de4b9ce44819d40a26c06ddd8344a143c60",
+    "preset_version": "calm-guide-v2",
+    "source_sha256": "ea6674f9bec758f9a2536aed6b64be4c61d8caaca96353c27389de59d14c4943"
+  },
+  {
+    "file": "preview-v2-gu-male-0.mp3",
+    "language": "gu",
+    "gender": "male",
+    "voice_id": "gu-IN-NiranjanNeural",
+    "text": "સ્મૃતિ એઆઈમાં આપનું સ્વાગત છે.",
+    "sha256": "b29d6ae49e064e1a8be7e7ecebbdd0ab4febe2969f0f3d63bb26de87f79119f8",
+    "preset_version": "calm-guide-v2",
+    "source_sha256": "fca1bb3747dedfd2d4e9f1dc6ffea0a4e82ad8f60ec26b945968a3de8002660d"
+  },
+  {
+    "file": "preview-v2-gu-male-1.mp3",
+    "language": "gu",
+    "gender": "male",
+    "voice_id": "gu-IN-NiranjanNeural",
+    "text": "ચાલો આપણે સાથે મળીને ડૉ. બી. આર. આંબેડકરના વિચારોનો અભ્યાસ કરીએ.",
+    "sha256": "ad8d2bc087b2a9919bfe91fddbb46f3c32915d80764eb8d4c3453b3516cd5367",
+    "preset_version": "calm-guide-v2",
+    "source_sha256": "b1775d8df72d4c9abd69c35a7c4afcceb33e1ec7e81aef32a982d9b79e820e33"
+  },
+  {
+    "file": "preview-v2-hi-female-0.mp3",
+    "language": "hi",
+    "gender": "female",
+    "voice_id": "hi-IN-SwaraNeural",
+    "text": "SMRITI AI में आपका स्वागत है।",
+    "sha256": "c2b38a185ed1b0dbd3050dfc35fb96060322d1f971456c976dcf019c9bfd9a99",
+    "preset_version": "calm-guide-v2",
+    "source_sha256": "268cb115f385a5739b327bcbf07a1028bd45c6a4adc3d7088fca52f36202550b"
+  },
+  {
+    "file": "preview-v2-hi-female-1.mp3",
+    "language": "hi",
+    "gender": "female",
+    "voice_id": "hi-IN-SwaraNeural",
+    "text": "आइए, डॉ. बाबासाहेब आंबेडकर के विचारों को साथ मिलकर जानें।",
+    "sha256": "4a20c4e374e624b172e738e6ea81cf650595e2a96125a33906d78b5d3f828f15",
+    "preset_version": "calm-guide-v2",
+    "source_sha256": "34fc6387fb9efb5a66dc00eb2197de00d70ff42517ae69540ce930884d348c2b"
+  },
+  {
+    "file": "preview-v2-hi-male-0.mp3",
+    "language": "hi",
+    "gender": "male",
+    "voice_id": "hi-IN-MadhurNeural",
+    "text": "SMRITI AI में आपका स्वागत है।",
+    "sha256": "0732f516b8a7d0faa84027b9bc3b0da46b7d06548cde84a44caf3ad04e6d9af9",
+    "preset_version": "calm-guide-v2",
+    "source_sha256": "b811c41dbc0c636bc94b9b12813b9b14c4d026dc7bbf61304120013d9d55ffbd"
+  },
+  {
+    "file": "preview-v2-hi-male-1.mp3",
+    "language": "hi",
+    "gender": "male",
+    "voice_id": "hi-IN-MadhurNeural",
+    "text": "आइए, डॉ. बाबासाहेब आंबेडकर के विचारों को साथ मिलकर जानें।",
+    "sha256": "9f05557f50823824cdffd48de339198ccb69af0045443e79fe41ccf8184006a0",
+    "preset_version": "calm-guide-v2",
+    "source_sha256": "d6853774fe1ea7dfd75a339dc644b3e9d260f06ea183faf2eb07fb22cc42e865"
+  },
+  {
+    "file": "preview-v2-kn-female-0.mp3",
+    "language": "kn",
+    "gender": "female",
+    "voice_id": "kn-IN-SapnaNeural",
+    "text": "ಸ್ಮೃತಿ ಎಐ ಗೆ ಸ್ವಾಗತ.",
+    "sha256": "342b0222c14c3100e68e88424a897faf1884bc2c3586bffc00a3e6271060e954",
+    "preset_version": "calm-guide-v2",
+    "source_sha256": "7e941057e6ba42832cd87087b6b2acbe95239bb73ce8b01f2cfafdeb378646ae"
+  },
+  {
+    "file": "preview-v2-kn-female-1.mp3",
+    "language": "kn",
+    "gender": "female",
+    "voice_id": "kn-IN-SapnaNeural",
+    "text": "ಡಾ. ಬಿ. ಆರ್. ಅಂಬೇಡ್ಕರ್ ಅವರ ಆಲೋಚನೆಗಳನ್ನು ಒಟ್ಟಿಗೆ ಅನ್ವೇಷಿಸೋಣ.",
+    "sha256": "35855d43903515fe9e062cdc899bd4b4d9dcc3659a36db24ad307f728e0e92b1",
+    "preset_version": "calm-guide-v2",
+    "source_sha256": "f2353a4d202a9fd87e3126082730ce415b224635c090d6125a376262a7a48550"
+  },
+  {
+    "file": "preview-v2-kn-male-0.mp3",
+    "language": "kn",
+    "gender": "male",
+    "voice_id": "kn-IN-GaganNeural",
+    "text": "ಸ್ಮೃತಿ ಎಐ ಗೆ ಸ್ವಾಗತ.",
+    "sha256": "6c79ae11dfaf298ee0c7df9f0332c8400ab4d8a43bfbaa4359a1658949490d89",
+    "preset_version": "calm-guide-v2",
+    "source_sha256": "58411048e44b661be62c1df8a5c8e5095b34b029e42605bb85561b9a16821925"
+  },
+  {
+    "file": "preview-v2-kn-male-1.mp3",
+    "language": "kn",
+    "gender": "male",
+    "voice_id": "kn-IN-GaganNeural",
+    "text": "ಡಾ. ಬಿ. ಆರ್. ಅಂಬೇಡ್ಕರ್ ಅವರ ಆಲೋಚನೆಗಳನ್ನು ಒಟ್ಟಿಗೆ ಅನ್ವೇಷಿಸೋಣ.",
+    "sha256": "dd9abe6fa63811163be3ba833779dec9bcc003125c0df6208efd86dc939a923d",
+    "preset_version": "calm-guide-v2",
+    "source_sha256": "deb7b8e6283f83f4a6f71050b413c9b9f49f8191e084b8d2e300c028d2b1f2ed"
+  },
+  {
+    "file": "preview-v2-ml-female-0.mp3",
+    "language": "ml",
+    "gender": "female",
+    "voice_id": "ml-IN-SobhanaNeural",
+    "text": "സ്മിര് ത്തി ഐ.",
+    "sha256": "338590c51147a97c4a8b141c08db64be7dbf4f426c974048e850b6619cd4276e",
+    "preset_version": "calm-guide-v2",
+    "source_sha256": "20cb92513447fdc8b6a9355f0da3adc194a9a37b2d8bf380332931b96a3aef52"
+  },
+  {
+    "file": "preview-v2-ml-female-1.mp3",
+    "language": "ml",
+    "gender": "female",
+    "voice_id": "ml-IN-SobhanaNeural",
+    "text": "എല് സ്വാഗതം.",
+    "sha256": "8c0c0f7dd317eb148c34a3110f0d731dd2b8e4c8329a1531921381d163ad7445",
+    "preset_version": "calm-guide-v2",
+    "source_sha256": "0a6b5a1df9e5fc7e4e7fe078550332c71ac9476eb9d76ddd3688969b9c3b7a1b"
+  },
+  {
+    "file": "preview-v2-ml-female-2.mp3",
+    "language": "ml",
+    "gender": "female",
+    "voice_id": "ml-IN-SobhanaNeural",
+    "text": "ഡോ. ബി. ആർ. അംബേദ്കര് ന്റെ ആശയങ്ങള് നമുക്ക് ഒരുമിച്ച് പര്യവേക്ഷണം ചെയ്യാം.",
+    "sha256": "f8cc50d3dd89a94cb79e47df11b05e86c4746b03ed43a5fcf21532ff309d2961",
+    "preset_version": "calm-guide-v2",
+    "source_sha256": "8c14d036cd075b1808ebca506b53afff7ab30cb47a3c9ccd3e87e552c55a32f2"
+  },
+  {
+    "file": "preview-v2-ml-male-0.mp3",
+    "language": "ml",
+    "gender": "male",
+    "voice_id": "ml-IN-MidhunNeural",
+    "text": "സ്മിര് ത്തി ഐ.",
+    "sha256": "434fdc61f9359f797694652c1200918577e914d8af5bbdf3d129dd7d746250b7",
+    "preset_version": "calm-guide-v2",
+    "source_sha256": "fb47899335dd25fb5b319dceca08ac9150579b517d73b08e8be473a8ab8538d4"
+  },
+  {
+    "file": "preview-v2-ml-male-1.mp3",
+    "language": "ml",
+    "gender": "male",
+    "voice_id": "ml-IN-MidhunNeural",
+    "text": "എല് സ്വാഗതം.",
+    "sha256": "ddb049483f483712bd6d26a58122bb1ccad25c7eeab379fd658b4f2d29d5a15f",
+    "preset_version": "calm-guide-v2",
+    "source_sha256": "3ca443560ee006f748f658f4a8455a07927951417bfade3ff83289602c5e1030"
+  },
+  {
+    "file": "preview-v2-ml-male-2.mp3",
+    "language": "ml",
+    "gender": "male",
+    "voice_id": "ml-IN-MidhunNeural",
+    "text": "ഡോ. ബി. ആർ. അംബേദ്കര് ന്റെ ആശയങ്ങള് നമുക്ക് ഒരുമിച്ച് പര്യവേക്ഷണം ചെയ്യാം.",
+    "sha256": "9c826249c94d1acfc4bc510b03e0ed2777f6cddfc1e6fd7dd7422819dc20fd8b",
+    "preset_version": "calm-guide-v2",
+    "source_sha256": "ee24afab04569ad9f6b3677efe1aee63448a6db130d7ae9ffe9cf50f48608f85"
+  },
+  {
+    "file": "preview-v2-mr-female-0.mp3",
+    "language": "mr",
+    "gender": "female",
+    "voice_id": "mr-IN-AarohiNeural",
+    "text": "SMRITI AI मध्ये तुमचे स्वागत आहे.",
+    "sha256": "6053347d6485d5950bd0b6303f84e50bb1fac071dd7ba121d15a7cec1a9ad232",
+    "preset_version": "calm-guide-v2",
+    "source_sha256": "99eaebfd8e3504e6981e0039262a115b2639b4f87c3fad5ce710374a8ff5300c"
+  },
+  {
+    "file": "preview-v2-mr-female-1.mp3",
+    "language": "mr",
+    "gender": "female",
+    "voice_id": "mr-IN-AarohiNeural",
+    "text": "चला, डॉ. बाबासाहेब आंबेडकरांचे विचार एकत्र जाणून घेऊया.",
+    "sha256": "7cfef86a2ad43da6f34068cd9bdee8eb33e046e47ece2f330b831b408da26027",
+    "preset_version": "calm-guide-v2",
+    "source_sha256": "0c610f39796fdc65a691c879ea3bcab5434d6e8b3e7f76037ba276a2af5eb06d"
+  },
+  {
+    "file": "preview-v2-mr-male-0.mp3",
+    "language": "mr",
+    "gender": "male",
+    "voice_id": "mr-IN-ManoharNeural",
+    "text": "SMRITI AI मध्ये तुमचे स्वागत आहे.",
+    "sha256": "2094526035c77b7831c29c1d28a95853789244f723a3822696ae339af9a7569c",
+    "preset_version": "calm-guide-v2",
+    "source_sha256": "63eb97d11e0be5c179f52f9d59d1aae0ebf4441dde14a92e0705156365cdbc43"
+  },
+  {
+    "file": "preview-v2-mr-male-1.mp3",
+    "language": "mr",
+    "gender": "male",
+    "voice_id": "mr-IN-ManoharNeural",
+    "text": "चला, डॉ. बाबासाहेब आंबेडकरांचे विचार एकत्र जाणून घेऊया.",
+    "sha256": "644710e1f9e82b1e8075a87938b92c504333574f5eac5f292ca25f233e8d534c",
+    "preset_version": "calm-guide-v2",
+    "source_sha256": "cfcaef97d56d38de661c5b2b5abdac1897f79bc5c45830df2455eac6546f6fdf"
+  },
+  {
+    "file": "preview-v2-ne-female-0.mp3",
+    "language": "ne",
+    "gender": "female",
+    "voice_id": "ne-NP-HemkalaNeural",
+    "text": "स्वागत छ, श्रीमती एआईमा, हामी मिलेर डा. बी.आर. अम्बेडकरको विचारहरू बुझौं ।",
+    "sha256": "9910b0dcb7414824153e392832ff839115f0c2117df3746ea98903afc9cd0452",
+    "preset_version": "calm-guide-v2",
+    "source_sha256": "159e9f78316ea0344c8c35315708195e37d37d1a845c4bbd1cc5bd90adc0f516"
+  },
+  {
+    "file": "preview-v2-ne-male-0.mp3",
+    "language": "ne",
+    "gender": "male",
+    "voice_id": "ne-NP-SagarNeural",
+    "text": "स्वागत छ, श्रीमती एआईमा, हामी मिलेर डा. बी.आर. अम्बेडकरको विचारहरू बुझौं ।",
+    "sha256": "21929c7c5f8e7041be7fea971b65a2bdbc26802025ba8051aca8446c845c7283",
+    "preset_version": "calm-guide-v2",
+    "source_sha256": "b55b6608fa3a9c90882458a2502b4f9ce9a62a9d8aaab2a28eab3a60e4b4d8c2"
+  },
+  {
+    "file": "preview-v2-ta-female-0.mp3",
+    "language": "ta",
+    "gender": "female",
+    "voice_id": "ta-IN-PallaviNeural",
+    "text": "ஸ்மிருதி ஐஐ-க்கு வரவேற்கிறோம்.",
+    "sha256": "de1cfbb61bc84e1efdf9402fd7699ede54538ed831d1404120fdefe1579d3533",
+    "preset_version": "calm-guide-v2",
+    "source_sha256": "bf352818867b0e0256d2c8dd4ae805f0cc942045887997d078e0caf7fb7e24b1"
+  },
+  {
+    "file": "preview-v2-ta-female-1.mp3",
+    "language": "ta",
+    "gender": "female",
+    "voice_id": "ta-IN-PallaviNeural",
+    "text": "டாக்டர் பி. ஆர். அம்பேத்கரின் யோசனைகளை ஒன்றாக ஆராய்வோம்.",
+    "sha256": "7eff9b73fb7352b24c9d1ef6e8c3574612625ff5e7a148e1786b4da52ee3beb0",
+    "preset_version": "calm-guide-v2",
+    "source_sha256": "e92139376ec9270ae8b9911cac98e634804bf1764b2ce7248645676efc6a8545"
+  },
+  {
+    "file": "preview-v2-ta-male-0.mp3",
+    "language": "ta",
+    "gender": "male",
+    "voice_id": "ta-IN-ValluvarNeural",
+    "text": "ஸ்மிருதி ஐஐ-க்கு வரவேற்கிறோம்.",
+    "sha256": "73b6ba7ae35a860429fa3add022c96381463576d88a9fabae2e9fae3cc60da22",
+    "preset_version": "calm-guide-v2",
+    "source_sha256": "9607942bc0729e93352ed49bb9bbf8ee21c3a74769b84c2aecc5e26315411298"
+  },
+  {
+    "file": "preview-v2-ta-male-1.mp3",
+    "language": "ta",
+    "gender": "male",
+    "voice_id": "ta-IN-ValluvarNeural",
+    "text": "டாக்டர் பி. ஆர். அம்பேத்கரின் யோசனைகளை ஒன்றாக ஆராய்வோம்.",
+    "sha256": "30dbb3a038ef2b151061489f87de05edd43d2d56e6810410d17e52046adafaf8",
+    "preset_version": "calm-guide-v2",
+    "source_sha256": "f073466bd48a95e54e4a224ebb6302cce9347504b06b57a96fc113f5d4077db4"
+  },
+  {
+    "file": "preview-v2-te-female-0.mp3",
+    "language": "te",
+    "gender": "female",
+    "voice_id": "te-IN-ShrutiNeural",
+    "text": "స్మిరితి AI కు స్వాగతం.",
+    "sha256": "93f93c2bd03d3f46599c54284cc0a8d03293600dc35571411ec341a7c41fc0fe",
+    "preset_version": "calm-guide-v2",
+    "source_sha256": "5092af223e87f292d96250b19f1b768ce13a04ee02bc97baa265d03b00791dd3"
+  },
+  {
+    "file": "preview-v2-te-female-1.mp3",
+    "language": "te",
+    "gender": "female",
+    "voice_id": "te-IN-ShrutiNeural",
+    "text": "డాక్టర్ బి. ఆర్. అంబేద్కర్ ఆలోచనలను కలిసి అన్వేషించండి.",
+    "sha256": "02a749b0ec1f1d48a0cad4ac21e2068b2ad0536e86e4f2cf6cd05ea0b5b7dce0",
+    "preset_version": "calm-guide-v2",
+    "source_sha256": "bf3dde6812089f5f3175e55dd89ca9390ea267ec038e3981d960434b607563c3"
+  },
+  {
+    "file": "preview-v2-te-male-0.mp3",
+    "language": "te",
+    "gender": "male",
+    "voice_id": "te-IN-MohanNeural",
+    "text": "స్మిరితి AI కు స్వాగతం.",
+    "sha256": "db67411366627dfd2563ba4c432e89b41757af728188d9c4127ad39e046da71f",
+    "preset_version": "calm-guide-v2",
+    "source_sha256": "584f92ede4b70668478b2b4d6c8c3db9ae75bf562c253fdbf6cfb96336b593da"
+  },
+  {
+    "file": "preview-v2-te-male-1.mp3",
+    "language": "te",
+    "gender": "male",
+    "voice_id": "te-IN-MohanNeural",
+    "text": "డాక్టర్ బి. ఆర్. అంబేద్కర్ ఆలోచనలను కలిసి అన్వేషించండి.",
+    "sha256": "eeb731a75f90ca41d47d2b9fc791c38e2a6dcf5b07638fc42148763cf3459315",
+    "preset_version": "calm-guide-v2",
+    "source_sha256": "310bd8fc968bc0b99039b9c2461542ac01afe8b3de05046092e5c7a50c7b5777"
+  },
+  {
+    "file": "preview-v2-ur-female-0.mp3",
+    "language": "ur",
+    "gender": "female",
+    "voice_id": "ur-IN-GulNeural",
+    "text": "سمریتی اے آئی میں خوش آمدید۔ آئیے ڈاکٹر بی آر امبیڈکر کے خیالات کو مل کر دریافت کریں۔",
+    "sha256": "3d3c05129aee0282d9a910bac84fd33a6f5cbc0d0c89641ad0c952b5a9633e83",
+    "preset_version": "calm-guide-v2",
+    "source_sha256": "edb9b436555cd86b717f3a09763d5300061439b14abcab4751b75f3b21f25db5"
+  },
+  {
+    "file": "preview-v2-ur-male-0.mp3",
+    "language": "ur",
+    "gender": "male",
+    "voice_id": "ur-IN-SalmanNeural",
+    "text": "سمریتی اے آئی میں خوش آمدید۔ آئیے ڈاکٹر بی آر امبیڈکر کے خیالات کو مل کر دریافت کریں۔",
+    "sha256": "3cc782f9597a51d929bff5c0ef7a423ef86e1829ed5b08808dce63c6312bcc95",
+    "preset_version": "calm-guide-v2",
+    "source_sha256": "268bde5f58bf947b3f8333e04c36ff01215afd882ee8fcb11ac7e659eda06a12"
+  }
+]

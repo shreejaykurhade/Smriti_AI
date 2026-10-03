@@ -91,3 +91,10 @@ test('short narration buffers keep names and native sentence boundaries intact',
  assert.deepEqual(narrationSegments('டாக்டர் பி. ஆர். அம்பேத்கர். पुढे वाचा.'),['டாக்டர் பி. ஆர். அம்பேத்கர்.','पुढे वाचा.']);
  assert.deepEqual(narrationSegments(''),[]);
 });
+
+test('Vercel exposes only actual narrators and prepared languages even without browser dictation',()=>{
+ const {interactionLanguages}=loadTypescript('components/voice/interactionLanguages.ts');
+ const caps={mode:'serverless',stt:false,tts:true,translation:false,stt_languages:[],tts_languages:['en','mr','or'],prepared_languages:['en','mr','pa']};
+ assert.deepEqual(interactionLanguages(caps),['en','mr']);
+ assert.deepEqual(interactionLanguages({...caps,tts_languages:['en'],stt:true,stt_languages:['en','mr']}),['en']);
+});

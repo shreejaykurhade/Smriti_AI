@@ -710,5 +710,10 @@
   "Ministry of External Affairs · collected edition": "വിദേശകാര്യ മന്ത്രാലയം · ശേഖരിച്ച പതിപ്പ്",
   "Editorial note: the chronology focuses on activity and writing during Ambedkar’s lifetime. Posthumous publication is explicitly labelled. Dates and summaries link to official collected editions, Parliament’s original debates and Columbia University’s biographical chronology. Image credits are separate from historical sources.": "എഡിറ്റോറിയൽ കുറിപ്പ്ഃ അംബേദ്കർ ജീവിച്ചിരിക്കുന്ന കാലത്തെ പ്രവർത്തനത്തിലും എഴുത്തും ശ്രദ്ധ കേന്ദ്രീകരിക്കുന്നു. മരണാനന്തര പ്രസിദ്ധീകരണം വ്യക്തമായി ലേബൽ ചെയ്തിരിക്കുന്നു. തീയതികളും സംഗ്രഹങ്ങളും ഔദ്യോഗിക ശേഖരിച്ച പതിപ്പുകളിലേക്കും പാർലമെന്റിന്റെ യഥാർത്ഥ ചർച്ചകളിലേക്കും കൊളംബിയ സർവകലാശാലയുടെ ജീവചരിത്ര കാലക്രമത്തിലേക്കും ലിങ്കുചെയ്യുന്നു. ഇമേജ് ക്രെഡിറ്റുകൾ ചരിത്ര സ്രോതസ്സുകളിൽ നിന്ന് വേർതിരിച്ചിരിക്കുന്നു.",
   "Curated guide summary. Verify interpretation against the linked original documents.": "ലിങ്കുചെയ്തിരിക്കുന്ന ഒറിജിനൽ രേഖകളുമായി താരതമ്യം ചെയ്യുമ്പോൾ വ്യാഖ്യാനം പരിശോധിക്കുക.",
-  "Close record": "രേഖ അടയ്ക്കുക"
+  "Close record": "രേഖ അടയ്ക്കുക",
+  "No speech was heard. Please try again.": "ഒരു പ്രസംഗവും കേട്ടില്ല. ദയവായി വീണ്ടും ശ്രമിക്കുക.",
+  "Browser voice input uses your browser’s speech service.": "ബ്രൌസറിന്റെ വോയ്സ് ഇൻപുട്ട് നിങ്ങളുടെ ബ്രൌസറിലെ സ്പീച്ച് സർവീസ് ഉപയോഗിക്കുന്നു.",
+  "Voice input is not supported in this browser. You can type your question.": "ഈ ബ്രൌസറിൽ വോയ്സ് ഇൻപുട്ട് പിന്തുണയ്ക്കുന്നില്ല. നിങ്ങളുടെ ചോദ്യം ടൈപ്പ് ചെയ്യാം.",
+  "Voice input is unavailable for this language in your browser. You can type your question.": "നിങ്ങളുടെ ബ്രൌസറിൽ ഈ ഭാഷയ്ക്കായി വോയ്സ് ഇൻപുട്ട് ലഭ്യമല്ല. നിങ്ങളുടെ ചോദ്യം ടൈപ്പ് ചെയ്യാം.",
+  "This passage is available in its original language. Choose a ready voice answer for translated narration.": "ഈ ഭാഗം അതിന്റെ യഥാർത്ഥ ഭാഷയിൽ ലഭ്യമാണ്. പരിഭാഷപ്പെടുത്തിയ വിവരണത്തിനായി ഒരു റെഡി വോയ്സ് ഉത്തരം തിരഞ്ഞെടുക്കുക."
 }

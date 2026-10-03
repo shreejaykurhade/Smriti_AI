@@ -1,6 +1,6 @@
 # SMRITI AI — source-linked museum voice guide
 
-A Next.js web app/PWA and touchscreen kiosk interface for exploring Dr. B. R. Ambedkar’s writings, speeches and ideas. Vercel hosts the website and authenticated API proxy. A separate Python service runs Whisper, translation, speech synthesis and Pipecat conversations.
+A Next.js web app/PWA and touchscreen kiosk interface for exploring Dr. B. R. Ambedkar’s writings, speeches and ideas. Vercel hosts the website, archive API and direct online neural narration. When no model backend is configured, microphone input uses the browser’s SpeechRecognition service. An optional separate Python service adds Whisper, translation, local speech synthesis and Pipecat conversations.
 
 ## What is included
 
@@ -8,9 +8,9 @@ The catalogue has 13 featured works with direct original PDF links, collection l
 
 Research is an eight-topic curated guide, with source-linked summaries and 88 enabled regional answer packets. It is **not full-text archival RAG** and does not browse the internet during a visitor’s question. Questions outside the covered evidence receive an insufficient-evidence response. Exact quotations are kept separate from summaries, with verified PDF page references. The scanned Hindu Code Bill volume is labelled as not OCR-verified. Timeline sources distinguish biographical chronology from original works and image credits.
 
-Voice and text are available in English plus 11 Indian languages: Bengali, Gujarati, Hindi, Kannada, Malayalam, Marathi, Nepali, Punjabi, Tamil, Telugu and Urdu. The picker exposes only the configured intersection of input, narration and translation support. Unsupported and quota-dependent demo languages are hidden. Assamese is hidden because the short-question recognition smoke test did not meet the prototype’s quality bar. Female/male choices use distinct online neural speakers for English and ten Indian languages; Punjabi uses its installed single original MMS speaker. The prototype does not invent gender choices by changing pitch.
+With the model host connected, voice and text are available in English plus 11 Indian languages: Bengali, Gujarati, Hindi, Kannada, Malayalam, Marathi, Nepali, Punjabi, Tamil, Telugu and Urdu. The picker exposes only the configured intersection of input, narration and translation support. Unsupported and quota-dependent demo languages are hidden. Assamese is hidden because the short-question recognition smoke test did not meet the prototype’s quality bar. Female/male choices use distinct online neural speakers for English and ten Indian languages; Punjabi uses its installed single original MMS speaker. The prototype does not invent gender choices by changing pitch. Without a model host, Vercel exposes English and ten Indian narration languages from the reviewed online speaker list; Punjabi is hidden because its local MMS voice is not available on Vercel. Browser dictation is enabled only when the browser exposes SpeechRecognition, uses the selected locale, and disables a language if the browser rejects it. Remote recognition support varies by browser and provider; Firefox users can type and listen instead.
 
-Voice preferences are saved on this device. Museum and calm delivery use slower narration. Sentence buffering starts playback before the entire answer has been synthesized; one following sentence is prefetched, and Stop or a language change cancels playback. Prepared guide answers avoid repeated output translation. New regional questions still require input translation. Microphone capture uses Whisper through a Pipecat push-to-talk session; tapping the microphone again submits the question. Generated narration is explicitly labelled as a guide, never an original recording or a clone of Dr. Ambedkar.
+Voice preferences are saved on this device. Museum and calm delivery use slower narration. Sentence buffering starts playback before the entire answer has been synthesized; one following sentence is prefetched, and Stop or a language change cancels playback. Prepared guide answers avoid repeated output translation. New regional questions still require input translation. When a model host is configured, microphone capture uses Whisper through a Pipecat push-to-talk session; tapping the microphone again submits the question. Generated narration is explicitly labelled as a guide, never an original recording or a clone of Dr. Ambedkar.
 
 ## Run locally
 
@@ -33,7 +33,13 @@ The prepared local stack uses `faster-whisper` large-v3-turbo (CPU int8), with t
 
 NLLB and MMS checkpoints are CC-BY-NC research models used here for a noncommercial prototype. Hindi/Marathi guide scripts and key interface labels have editorial overrides. Other translation packs are machine-generated and require native-speaker proofreading before institutional publication. Hearing quality, pronunciation and microphone performance on museum hardware also require a site test.
 
-## Vercel + separate speech host
+## Deploy to Vercel
+
+The app now works without voice environment variables. `/api/voice/capabilities` returns the lightweight narrator mode with HTTP 200. `/api/voice/narrate` returns MP3 audio directly in one bounded Node.js request using `edge-tts-universal`; it never relies on local job files persisting across function instances. Browser input uses SpeechRecognition when available and does not claim to be Whisper. Ready answers and a small native topic vocabulary use the bundled source-linked guide packets; unsupported questions get a localized insufficient-evidence reply. No arbitrary live translation is claimed in this mode. Online narration sends spoken text to Microsoft; browser dictation uses the browser provider’s speech service. There is no API key requirement, but these external free services have no production SLA.
+
+The PWA worker clones responses before handing them to the browser, awaits optional cache writes, excludes APIs/RSC/Next.js chunks, and removes only old SMRITI caches. Updating the worker reloads already-controlled clients once. `/sw.js` has no-cache headers. The screenshot’s `contentscript.js` EventEmitter/ObjectMultiplex warnings come from an injected browser extension and are not emitted by this app.
+
+### Optional model host
 
 Import this project root into Vercel as a Next.js app. `vercel.json` routes the lightweight Flask archive API. The heavy speech process, models, virtual environment, caches and verification downloads are excluded by `.vercelignore`. Set these server-only variables:
 
@@ -42,7 +48,7 @@ VOICE_BACKEND_URL=https://voice.your-domain.in
 VOICE_API_KEY=<same long random secret as the speech host>
 ```
 
-Do not prefix these variables with `NEXT_PUBLIC_`. Vercel cannot run this long-lived model process or Pipecat WebSocket server. Run the Python service on a separate CPU/GPU machine with persistent storage and an HTTPS reverse proxy, using `voice.your-domain.in`. Attach the main website domain to Vercel. Set `PUBLIC_VOICE_URL` and exact `VOICE_ALLOWED_ORIGINS` on the speech host. Browser audio sessions use expiring, single-use tokens; API keys remain server-side.
+Do not prefix these variables with `NEXT_PUBLIC_`. The Whisper/NLLB/MMS model stack requires a persistent model host. Run the Python service on a separate CPU/GPU machine with persistent storage and an HTTPS reverse proxy, using `voice.your-domain.in`. Attach the main website domain to Vercel. Set `PUBLIC_VOICE_URL` and exact `VOICE_ALLOWED_ORIGINS` on the speech host. Browser audio sessions use expiring, single-use tokens; API keys remain server-side.
 
 ```sh
 cp speech_service/.env.example speech_service/.env
@@ -77,7 +83,7 @@ HF_HOME="$PWD/models/.hf" PYTHONPATH="$PWD" .venv/bin/python scripts/build_local
 .venv/bin/python scripts/refine_locales.py
 npm run typecheck
 npm run build
-node --test tests/frontend/localization.test.cjs
+node --test tests/frontend/*.test.cjs
 .venv/bin/python -m pytest tests --timeout=20 -q
 ```
 
@@ -88,3 +94,7 @@ Primary collection: https://www.mea.gov.in/books-writings-of-ambedkar.htm
 Original debate: https://elibrary.sansad.in/items/aad33de6-ec92-47a9-a8b5-16bab1d210fc
 
 Validated locally on 3 October 2026: both Vercel-style and isolated preview builds passed, along with 22 Python and 11 frontend checks. Real neural narration, native-script speech recognition checks, and the Whisper → source-linked guide → Pipecat speech path passed. Female/male English, Hindi and Marathi cold narration jobs became ready in roughly 2–4 seconds locally; this is a test result, not a hosted SLA. The launcher now prewarms 42 checksum-verified welcome sentence clips at the current pacing. Runtime model weights and private source verification downloads are not included in the source ZIP.
+
+Deployment repair checked on 3 October 2026: 25 frontend and 25 Python checks passed; production build and type checking passed. Service-worker tests reproduce consuming the original response before the cache opens, offline misses, quota failures and cache upgrades. Vercel voice tests cover missing backend variables, direct audio responses, narrator selection, request limits, cross-site protection, browser cancellation and unsupported languages. Live-provider and deployed-site results are verified separately.
+
+Forty genuine welcome sentence clips are bundled as MP3 previews with checksums, speaker IDs and the current museum pacing. The frontend uses them only for an exact text/speaker/style match; other answers are synthesized from their actual text. Both speakers across all 11 Vercel narration languages produced decodable audio in the real provider check. Cold provider requests can take longer; prerecorded previews do not imply that every answer is prerecorded.

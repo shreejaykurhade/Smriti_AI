@@ -710,5 +710,10 @@
   "Ministry of External Affairs · collected edition": "পররাষ্ট্র মন্ত্রণালয় · সংকলিত সংস্করণ",
   "Editorial note: the chronology focuses on activity and writing during Ambedkar’s lifetime. Posthumous publication is explicitly labelled. Dates and summaries link to official collected editions, Parliament’s original debates and Columbia University’s biographical chronology. Image credits are separate from historical sources.": "সম্পাদকীয় দ্রষ্টব্যঃ ক্রোনালজি আম্বেদকারের জীবদ্দশায় কার্যকলাপ এবং লেখার উপর দৃষ্টি নিবদ্ধ করে। পোস্টমোড প্রকাশনাটি স্পষ্টভাবে লেবেলযুক্ত। তারিখ এবং সংক্ষিপ্তসারগুলি সরকারী সংগৃহীত সংস্করণ, সংসদের মূল বিতর্ক এবং কলম্বিয়া বিশ্ববিদ্যালয়ের জীবনী ক্রোনালজির সাথে লিঙ্ক করে। চিত্র ক্রেডিটগুলি ঐতিহাসিক উত্স থেকে পৃথক।",
   "Curated guide summary. Verify interpretation against the linked original documents.": "সংক্ষিপ্ত নির্দেশিকাঃ সংযুক্ত মূল দস্তাবেজগুলির সাথে ব্যাখ্যাটি যাচাই করুন।",
-  "Close record": "অভিলেখ বন্ধ করুন"
+  "Close record": "অভিলেখ বন্ধ করুন",
+  "No speech was heard. Please try again.": "কোনো বক্তৃতা শুনিনি, দয়া করে আবার চেষ্টা করুন।",
+  "Browser voice input uses your browser’s speech service.": "ব্রাউজার ভয়েস ইনপুট আপনার ব্রাউজারের স্পিচ সার্ভিস ব্যবহার করে।",
+  "Voice input is not supported in this browser. You can type your question.": "এই ব্রাউজারে ভয়েস ইনপুট সমর্থিত নয়। আপনি আপনার প্রশ্ন টাইপ করতে পারেন।",
+  "Voice input is unavailable for this language in your browser. You can type your question.": "আপনার ব্রাউজারে এই ভাষার জন্য ভয়েস ইনপুট পাওয়া যায় না। আপনি আপনার প্রশ্নটি টাইপ করতে পারেন।",
+  "This passage is available in its original language. Choose a ready voice answer for translated narration.": "অনুবাদকৃত গল্পের জন্য একটি প্রস্তুত কণ্ঠের উত্তর নির্বাচন করুন।"
 }

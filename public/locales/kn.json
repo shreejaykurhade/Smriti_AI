@@ -710,5 +710,10 @@
   "Ministry of External Affairs · collected edition": "ವಿದೇಶಾಂಗ ವ್ಯವಹಾರಗಳ ಸಚಿವಾಲಯ · ಸಂಗ್ರಹಿಸಿದ ಆವೃತ್ತಿ",
   "Editorial note: the chronology focuses on activity and writing during Ambedkar’s lifetime. Posthumous publication is explicitly labelled. Dates and summaries link to official collected editions, Parliament’s original debates and Columbia University’s biographical chronology. Image credits are separate from historical sources.": "ಸಂಪಾದಕೀಯ ಟಿಪ್ಪಣಿಃ ಅಂಬೇಡ್ಕರ್ ಜೀವಿತಾವಧಿಯಲ್ಲಿನ ಚಟುವಟಿಕೆ ಮತ್ತು ಬರವಣಿಗೆಯ ಮೇಲೆ ಕ್ರೋನಾಲಜಿ ಕೇಂದ್ರೀಕರಿಸುತ್ತದೆ. ಮರಣಾನಂತರದ ಪ್ರಕಟಣೆಯನ್ನು ಸ್ಪಷ್ಟವಾಗಿ ಲೇಬಲ್ ಮಾಡಲಾಗಿದೆ. ದಿನಾಂಕಗಳು ಮತ್ತು ಸಾರಾಂಶಗಳು ಅಧಿಕೃತ ಸಂಗ್ರಹಿಸಿದ ಆವೃತ್ತಿಗಳು, ಸಂಸತ್ತಿನ ಮೂಲ ಚರ್ಚೆಗಳು ಮತ್ತು ಕೊಲಂಬಿಯಾ ವಿಶ್ವವಿದ್ಯಾಲಯದ ಜೀವನಚರಿತ್ರೆಯ ಕ್ರೋನಲಜಿಗೆ ಲಿಂಕ್ ಮಾಡುತ್ತವೆ. ಚಿತ್ರ ಕ್ರೆಡಿಟ್ಗಳು ಐತಿಹಾಸಿಕ ಮೂಲಗಳಿಂದ ಪ್ರತ್ಯೇಕವಾಗಿವೆ.",
   "Curated guide summary. Verify interpretation against the linked original documents.": "ಕ್ಯುರೇಟೆಡ್ ಗೈಡ್ ಸಾರಾಂಶ. ಲಿಂಕ್ ಮಾಡಲಾದ ಮೂಲ ದಾಖಲೆಗಳಿಗೆ ಅನುಗುಣವಾಗಿ ವ್ಯಾಖ್ಯಾನ ಪರಿಶೀಲಿಸಿ.",
-  "Close record": "ದಾಖಲೆಯನ್ನು ಮುಚ್ಚಿ"
+  "Close record": "ದಾಖಲೆಯನ್ನು ಮುಚ್ಚಿ",
+  "No speech was heard. Please try again.": "ಯಾವುದೇ ಭಾಷಣ ಕೇಳಲಿಲ್ಲ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.",
+  "Browser voice input uses your browser’s speech service.": "ಬ್ರೌಸರ್ ಧ್ವನಿ ಇನ್ಪುಟ್ ನಿಮ್ಮ ಬ್ರೌಸ್  ಭಾಷಣ ಸೇವೆಯನ್ನು ಬಳಸುತ್ತದೆ.",
+  "Voice input is not supported in this browser. You can type your question.": "ಈ ಬ್ರೌಸರ್ನಲ್ಲಿ ಧ್ವನಿ ಇನ್ಪುಟ್ ಅನ್ನು ಬೆಂಬಲಿಸುವುದಿಲ್ಲ. ನೀವು ನಿಮ್ಮ ಪ್ರಶ್ನೆಯನ್ನು ಟೈಪ್ ಮಾಡಬಹುದು.",
+  "Voice input is unavailable for this language in your browser. You can type your question.": "ನಿಮ್ಮ ಬ್ರೌಸರ್ನಲ್ಲಿ ಈ ಭಾಷೆಗೆ ಧ್ವನಿ ಇನ್ಪುಟ್ ಲಭ್ಯವಿಲ್ಲ. ನಿಮ್ಮ ಪ್ರಶ್ನೆಯನ್ನು ನೀವು ಟೈಪ್ ಮಾಡಬಹುದು.",
+  "This passage is available in its original language. Choose a ready voice answer for translated narration.": "ಈ ಪದ್ಯವು ಅದರ ಮೂಲ ಭಾಷೆಯಲ್ಲಿ ಲಭ್ಯವಿದೆ. ಅನುವಾದಿತ ಕಥೆಗೆ ಸಿದ್ಧವಾದ ಧ್ವನಿ ಉತ್ತರವನ್ನು ಆರಿಸಿ."
 }

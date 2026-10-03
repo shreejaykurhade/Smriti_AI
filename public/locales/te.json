@@ -710,5 +710,10 @@
   "Ministry of External Affairs · collected edition": "విదేశీ వ్యవహారాల మంత్రిత్వ శాఖ · సేకరించిన ఎడిషన్",
   "Editorial note: the chronology focuses on activity and writing during Ambedkar’s lifetime. Posthumous publication is explicitly labelled. Dates and summaries link to official collected editions, Parliament’s original debates and Columbia University’s biographical chronology. Image credits are separate from historical sources.": "ఎడిటోరియల్ గమనికః ఈ కాలక్రమం అంబేద్కర్ జీవితకాలంలో కార్యకలాపాలు మరియు రచనలపై దృష్టి పెడుతుంది. మరణానంతర ప్రచురణలు స్పష్టంగా లేబుల్ చేయబడ్డాయి. తేదీలు మరియు సారాంశాలు అధికారిక సేకరించిన ఎడిషన్లు, పార్లమెంటు యొక్క అసలు చర్చలు మరియు కొలంబియా విశ్వవిద్యాలయం యొక్క జీవిత చరిత్ర కాలక్రమాన్ని లింక్ చేస్తాయి. చిత్ర క్రెడిట్లు చారిత్రక మూలాల నుండి వేరుగా ఉంటాయి.",
   "Curated guide summary. Verify interpretation against the linked original documents.": "క్యూరేటెడ్ గైడ్ సారాంశం. లింక్ చేయబడిన అసలు పత్రాలతో వివరణను ధృవీకరించండి.",
-  "Close record": "రికార్డును మూసివేయండి"
+  "Close record": "రికార్డును మూసివేయండి",
+  "No speech was heard. Please try again.": "ఏ ప్రసంగం వినబడలేదు. దయచేసి మళ్ళీ ప్రయత్నించండి.",
+  "Browser voice input uses your browser’s speech service.": "బ్రౌజర్ వాయిస్ ఇన్పుట్ మీ బ్రౌజర్ యొక్క వాయిస్ సేవను ఉపయోగిస్తుంది.",
+  "Voice input is not supported in this browser. You can type your question.": "ఈ బ్రౌజర్లో వాయిస్ ఇన్పుట్ మద్దతు లేదు. మీరు మీ ప్రశ్నను టైప్ చేయవచ్చు.",
+  "Voice input is unavailable for this language in your browser. You can type your question.": "మీ బ్రౌజర్లో ఈ భాష కోసం వాయిస్ ఇన్పుట్ అందుబాటులో లేదు. మీరు మీ ప్రశ్నను టైప్ చేయవచ్చు.",
+  "This passage is available in its original language. Choose a ready voice answer for translated narration.": "ఈ భాగం దాని అసలు భాషలో లభిస్తుంది. అనువదించిన కథనం కోసం సిద్ధంగా ఉన్న వాయిస్ సమాధానాన్ని ఎంచుకోండి."
 }

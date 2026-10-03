@@ -151,13 +151,19 @@ export default function ArchiveApp() {
   useEffect(()=>{const saved=localStorage.getItem("smriti-collection");if(saved)try{setCollection(JSON.parse(saved))}catch{}},[]);
   useEffect(()=>{localStorage.setItem("smriti-collection",JSON.stringify(collection))},[collection]);
   useEffect(()=>{
-    if("serviceWorker" in navigator) navigator.serviceWorker.register("/sw.js").catch(()=>{});
+    let reloading=false;
+    const hadWorker="serviceWorker" in navigator&&Boolean(navigator.serviceWorker.controller);
+    const onWorkerUpdate=()=>{if(hadWorker&&!reloading){reloading=true;window.location.reload();}};
+    if("serviceWorker" in navigator){
+      navigator.serviceWorker.addEventListener("controllerchange",onWorkerUpdate);
+      void navigator.serviceWorker.register("/sw.js",{updateViaCache:"none"}).then(registration=>registration.update()).catch(()=>{});
+    }
     const nav=navigator as Navigator & {standalone?:boolean};
     if(window.matchMedia("(display-mode: standalone)").matches || nav.standalone)setInstalled(true);
     const onPrompt=(event:Event)=>{event.preventDefault();setInstallPrompt(event)};
     const onInstalled=()=>{setInstalled(true);setInstallPrompt(null)};
     window.addEventListener("beforeinstallprompt",onPrompt); window.addEventListener("appinstalled",onInstalled);
-    return()=>{window.removeEventListener("beforeinstallprompt",onPrompt);window.removeEventListener("appinstalled",onInstalled)};
+    return()=>{if("serviceWorker" in navigator)navigator.serviceWorker.removeEventListener("controllerchange",onWorkerUpdate);window.removeEventListener("beforeinstallprompt",onPrompt);window.removeEventListener("appinstalled",onInstalled)};
   },[]);
   const results=useMemo(()=>{const q=query.normalize("NFKC").toLocaleLowerCase().trim();const messages=interfaceLocale.language===lang?interfaceLocale.messages:{};return q?records.filter(r=>localizedSearchText([r.title,r.summary,r.type,r.collection,...r.themes],messages).includes(q)):records},[query,records,lang,interfaceLocale]);
   const historyItems=useMemo(()=>historyFilter==="all"?timeline:timeline.filter(item=>item.kind===historyFilter),[historyFilter]);
@@ -170,7 +176,7 @@ export default function ArchiveApp() {
     const sourceLanguage=questionLanguage||(/^[\x00-\x7F]*$/.test(question)?"en":lang);
     try{
       let data;
-      if(voice.capabilities && (lang==="en"||voice.capabilities.translation)){
+      if(voice.capabilities && voice.capabilities.mode!=="serverless" && (lang==="en"||voice.capabilities.translation)){
         data=await voiceJob({kind:"research",text:question,language:lang,source_language:sourceLanguage},abort.signal);
       }else{
         const response=await fetch("/api/ask",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({question,language:lang,question_language:sourceLanguage}),signal:abort.signal});

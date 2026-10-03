@@ -710,5 +710,10 @@
   "Ministry of External Affairs · collected edition": "வெளியுறவு அமைச்சகம் · தொகுக்கப்பட்ட பதிப்பு",
   "Editorial note: the chronology focuses on activity and writing during Ambedkar’s lifetime. Posthumous publication is explicitly labelled. Dates and summaries link to official collected editions, Parliament’s original debates and Columbia University’s biographical chronology. Image credits are separate from historical sources.": "பதிப்பு குறிப்புஃ காலவரிசை அம்பேத்கர் வாழ்நாளில் செயல்பாடு மற்றும் எழுத்துக்களில் கவனம் செலுத்துகிறது. மரணத்திற்குப் பிறகு வெளியீடு வெளிப்படையாக குறிக்கப்பட்டுள்ளது. தேதிகள் மற்றும் சுருக்கங்கள் அதிகாரப்பூர்வ தொகுக்கப்பட்ட பதிப்புகள், பாராளுமன்றத்தின் அசல் விவாதங்கள் மற்றும் கொலம்பியா பல்கலைக்கழகத்தின் வாழ்க்கை வரலாற்று காலவரிசையுடன் இணைக்கப்பட்டுள்ளன. புகைப்படக் கடன்கள் வரலாற்று ஆதாரங்களிலிருந்து தனித்தனியாக உள்ளன.",
   "Curated guide summary. Verify interpretation against the linked original documents.": "இணைக்கப்பட்ட அசல் ஆவணங்களுடன் ஒப்பிடும்போது விளக்கத்தை சரிபார்க்கவும்.",
-  "Close record": "பதிவை மூடவும்"
+  "Close record": "பதிவை மூடவும்",
+  "No speech was heard. Please try again.": "எந்த உரையும் கேட்கப்படவில்லை. தயவுசெய்து மீண்டும் முயற்சிக்கவும்.",
+  "Browser voice input uses your browser’s speech service.": "உலாவி குரல் உள்ளீடு உங்கள் உலாவி  இன் பேச்சு சேவையை பயன்படுத்துகிறது.",
+  "Voice input is not supported in this browser. You can type your question.": "இந்த உலாவியில் குரல் உள்ளீடு ஆதரிக்கப்படவில்லை. உங்கள் கேள்வியை நீங்கள் தட்டச்சு செய்யலாம்.",
+  "Voice input is unavailable for this language in your browser. You can type your question.": "உங்கள் உலாவியில் இந்த மொழிக்கு குரல் உள்ளீடு கிடைக்கவில்லை. உங்கள் கேள்வியை நீங்கள் தட்டச்சு செய்யலாம்.",
+  "This passage is available in its original language. Choose a ready voice answer for translated narration.": "இந்த பகுதி அதன் அசல் மொழியில் கிடைக்கிறது. மொழிபெயர்க்கப்பட்ட கதைக்கு தயாரான குரல் பதிலைத் தேர்ந்தெடுக்கவும்."
 }

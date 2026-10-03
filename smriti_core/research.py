@@ -9,6 +9,8 @@ RECORDS=json.loads((ROOT/'records.json').read_text())
 TOPICS=json.loads((ROOT/'guide-topics.json').read_text())
 PACKS=ROOT/'guide-locales.json'
 GUIDE_LOCALES=json.loads(PACKS.read_text()) if PACKS.exists() else {}
+FALLBACKS=json.loads((ROOT/'guide-fallbacks.json').read_text())
+NATIVE_KEYWORDS=json.loads((ROOT/'guide-keywords.json').read_text())
 
 def normalize(text):return re.sub(r'[\s?？।.!]+',' ',text.casefold()).strip()
 
@@ -32,6 +34,9 @@ def topic_for(question,language):
     compact=re.sub(r'\s+','',value)
     if any(term in compact for term in native_democracy.get(language,[])):
         return next(topic for topic in TOPICS if topic['id']=='democracy')
+    for topic_id,terms in NATIVE_KEYWORDS.get(language,{}).items():
+        if any(re.sub(r'\s+','',term) in compact for term in terms):
+            return next(topic for topic in TOPICS if topic['id']==topic_id)
     tokens=set(re.findall(r'[a-z]+',value))
     scored=[]
     for topic in TOPICS:
@@ -52,8 +57,8 @@ def answer_question(question,language='en',question_language='en',translator=Non
         raise ValueError('Please enter a question of up to 1,200 characters.')
     normalized=question.strip();topic=topic_for(normalized,question_language)
     if question_language!='en' and not topic:
-        if translator is None:raise RuntimeError('Regional-language research needs the connected translation service.')
-        normalized=translator([normalized],question_language,'en')[0];topic=topic_for(normalized,'en')
+        if translator is not None:
+            normalized=translator([normalized],question_language,'en')[0];topic=topic_for(normalized,'en')
     if topic:
         ids=topic['records'];text=topic['answer'];packet=GUIDE_LOCALES.get(language,{}).get(topic['id'],{})
     else:
@@ -63,6 +68,6 @@ def answer_question(question,language='en',question_language='en',translator=Non
     if language!='en':
         if packet.get('answer'):text=packet['answer']
         elif translator is not None:text=translated_answer(text,language,translator)
-        else:raise RuntimeError('Translation is unavailable. Select English or connect the translation service.')
+        else:text=FALLBACKS.get(language,FALLBACKS['en'])
     selected=[r for rid in ids for r in RECORDS if r['id']==rid]
     return dict(answer=text,citations=[citation(r,i+1) for i,r in enumerate(selected)],mode='curated-source-guide',language=language,evidence_scope='curated summaries linked to verified primary editions',spoken_text=re.sub(r'\[\d+\]','',text),topic=topic['id'] if topic else None,prepared_translation=bool(language!='en' and packet.get('answer')))

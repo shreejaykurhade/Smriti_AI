@@ -20,14 +20,16 @@ export function VoiceControls({voice,preview,language}:{voice:ReturnType<typeof 
       <button onClick={preview} disabled={voice.busy||!voice.selectedVoice}><Volume2/>Preview voice</button>
       <label className="voice-auto"><input type="checkbox" checked={voice.autoSpeak} onChange={e=>voice.setAutoSpeak(e.target.checked)}/>Read answers aloud</label>
     </div>
-    <div className="guide-session"><button onClick={()=>voice.live?voice.disconnect():void voice.startLive()} disabled={!voice.live&&(voice.busy||!voice.capabilities?.stt||!voice.selectedVoice)}>
-      {voice.live?<Square/>:<Mic2/>}{voice.live?'End live guide':'Start live guide'}</button>
+    <div className="guide-session"><button onClick={()=>voice.capabilities?.mode==='serverless'?void voice.toggleRecording():voice.live?voice.disconnect():void voice.startLive()} disabled={!voice.recording&&!voice.live&&(voice.busy||!voice.capabilities?.stt||!voice.capabilities.stt_languages.includes(language)||!voice.selectedVoice)}>
+      {voice.recording||voice.live?<Square/>:<Mic2/>}{voice.capabilities?.mode==='serverless'?(voice.recording?'Send question':'Ask with your voice'):voice.live?'End live guide':'Start live guide'}</button>
       <button className="voice-refresh" aria-label="Refresh voices" onClick={()=>void voice.refreshCapabilities()}><RefreshCw/>Refresh voices</button>
       {voice.status.startsWith('Audio is ready')&&<button onClick={()=>void voice.resume()}>Play narration</button>}
     </div>
     {voice.selectedVoice?.gender==='original'&&<small className="single-speaker-note">This language has one original speaker. Male and female choices are available in other languages.</small>}
     <details className="voice-details"><summary>About this voice</summary><p>A generated museum guide, not a historical recording of Dr. Ambedkar.</p>
       {voice.selectedVoice?.online?<p>Online narration sends the spoken text to Microsoft’s speech service.</p>:<p>Voice generation runs on the connected model server.</p>}
+      {voice.capabilities?.mode==='serverless'&&<p>Browser voice input uses your browser’s speech service.</p>}
     </details>
+    {voice.capabilities?.mode==='serverless'&&!voice.capabilities.stt&&<small>Voice input is not supported in this browser. You can type your question.</small>}
   </section></LocalizedInterface>;
 }

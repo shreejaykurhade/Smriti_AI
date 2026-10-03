@@ -37,7 +37,9 @@ def translate_cached(texts,source,target):
 def translator(texts,source,target):return list(translate_cached(tuple(texts),source,target))
 
 @app.get('/api/health')
-def health():return jsonify(status='ok',service='SMRITI AI archive',voice_configured=bool(os.getenv('VOICE_BACKEND_URL') and os.getenv('VOICE_API_KEY')))
+def health():
+    configured=bool(os.getenv('VOICE_BACKEND_URL') and os.getenv('VOICE_API_KEY'))
+    return jsonify(status='ok',service='SMRITI AI archive',voice_configured=configured,voice_mode='model-host' if configured else 'serverless',release='vercel-voice-v26')
 @app.get('/api/records')
 def records():
     query=request.args.get('q','').lower().strip()
@@ -61,7 +63,8 @@ def ask():
     language=p.get('language','en');source=p.get('question_language','en')
     if language not in LANGUAGES or source not in LANGUAGES:return jsonify(error='Invalid language'),400
     try:
-        result=answer_question(p.get('question',''),language,source,translator)
+        connected=bool(os.getenv('VOICE_BACKEND_URL') and os.getenv('VOICE_API_KEY'))
+        result=answer_question(p.get('question',''),language,source,translator if connected else None)
         return jsonify(**result,language_name=LANGUAGES[language])
     except ValueError as e:return jsonify(error=str(e)),400
     except RuntimeError as e:return jsonify(error=str(e)),503
