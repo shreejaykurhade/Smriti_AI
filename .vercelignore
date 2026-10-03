@@ -14,3 +14,4 @@ eng.traineddata
 .next-preview
 
 .source-downloads/
+.env*

@@ -6,7 +6,8 @@ import urllib.request
 import urllib.error
 from functools import lru_cache
 from flask import Flask, jsonify, request
-from smriti_core.research import RECORDS, answer_question
+from smriti_core.research import RECORDS
+from smriti_core.answer_service import museum_answer, configured as answers_configured
 
 app = Flask(__name__)
 app.config['MAX_CONTENT_LENGTH'] = 60000
@@ -39,7 +40,7 @@ def translator(texts,source,target):return list(translate_cached(tuple(texts),so
 @app.get('/api/health')
 def health():
     configured=bool(os.getenv('VOICE_BACKEND_URL') and os.getenv('VOICE_API_KEY'))
-    return jsonify(status='ok',service='SMRITI AI archive',voice_configured=configured,voice_mode='model-host' if configured else 'serverless',release='vercel-voice-v26')
+    return jsonify(status='ok',service='SMRITI AI archive',voice_configured=configured,voice_mode='model-host' if configured else 'serverless',answer_configured=answers_configured(),release='vercel-answers-v27')
 @app.get('/api/records')
 def records():
     query=request.args.get('q','').lower().strip()
@@ -60,11 +61,15 @@ def translate():
 @app.post('/api/ask')
 def ask():
     p=request.get_json(silent=True) or {}
+    if not isinstance(p,dict):return jsonify(error='Invalid question request'),400
     language=p.get('language','en');source=p.get('question_language','en')
+    if not isinstance(language,str) or not isinstance(source,str):return jsonify(error='Invalid language'),400
     if language not in LANGUAGES or source not in LANGUAGES:return jsonify(error='Invalid language'),400
     try:
         connected=bool(os.getenv('VOICE_BACKEND_URL') and os.getenv('VOICE_API_KEY'))
-        result=answer_question(p.get('question',''),language,source,translator if connected else None)
-        return jsonify(**result,language_name=LANGUAGES[language])
+        result=museum_answer(p.get('question',''),language,source,translator if connected else None)
+        response=jsonify(**result,language_name=LANGUAGES[language])
+        response.headers['Cache-Control']='no-store'
+        return response
     except ValueError as e:return jsonify(error=str(e)),400
     except RuntimeError as e:return jsonify(error=str(e)),503

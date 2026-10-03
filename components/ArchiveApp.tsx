@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Archive, ArrowRight, BookOpen, Bot, CalendarDays, CheckCircle2, ChevronRight, CirclePlay, Database, Download, FileText, Languages, ListPlus, Menu, Mic2, Monitor, Network, QrCode, ScanLine, Search, Server, ShieldCheck, Sparkles, Tablet, Trash2, UploadCloud, Video, Volume2, Wifi, X } from "lucide-react";
 
-import { useMuseumVoice, voiceJob } from "./voice/useMuseumVoice";
+import { useMuseumVoice } from "./voice/useMuseumVoice";
 import { LocalizedInterface } from "./i18n/LocalizedInterface";
 import archiveRecords from "../smriti_core/records.json";
 import guideTopics from "../smriti_core/guide-topics.json";
@@ -175,13 +175,8 @@ export default function ArchiveApp() {
     setAsk(questionLanguage==="en"&&lang!=="en" ? interfaceLocale.messages[question]||question : question);setLoading(true);setAnswer(null);voice.setStatus("");
     const sourceLanguage=questionLanguage||(/^[\x00-\x7F]*$/.test(question)?"en":lang);
     try{
-      let data;
-      if(voice.capabilities && voice.capabilities.mode!=="serverless" && (lang==="en"||voice.capabilities.translation)){
-        data=await voiceJob({kind:"research",text:question,language:lang,source_language:sourceLanguage},abort.signal);
-      }else{
-        const response=await fetch("/api/ask",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({question,language:lang,question_language:sourceLanguage}),signal:abort.signal});
-        data=await response.json();if(!response.ok)throw new Error(data.error||"The archive service is unavailable.");
-      }
+      const response=await fetch("/api/ask",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({question,language:lang,question_language:sourceLanguage}),signal:abort.signal});
+      const data=await response.json();if(!response.ok)throw new Error(data.error||"The archive service is unavailable.");
       if(abort.signal.aborted)return;setAnswer(data);
       if(data.answer&&voice.autoSpeak&&voice.capabilities?.tts_languages.includes(lang))void voice.narrate(data.spoken_text||data.answer,lang);
     }catch(error){if(!abort.signal.aborted)setAnswer({answer:error instanceof Error?error.message:"The archive service is temporarily unavailable.",citations:[]});}
