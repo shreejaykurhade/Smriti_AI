@@ -9,11 +9,12 @@ export type SourceRecord = {
 
 export function SourcePanel({record,compact=false,language='en'}:{record:SourceRecord;compact?:boolean;language?:string}) {
   const page=record.excerptPage||record.pdfPage;
+  const pageLabel=page&&record.pageLabel?record.pageLabel.replace(/^PDF page \d+/,`PDF page ${page}`):record.pageLabel;
   const pdf=record.pdfUrl ? `${record.pdfUrl}${page?`#page=${page}`:''}` : undefined;
   return <LocalizedInterface language={language}><section className={`source-panel ${compact?'compact':''}`} aria-label="Original source">
     <div className="source-panel-heading"><ShieldCheck size={19}/><strong>Original source</strong></div>
     <p translate="no">{record.source}</p>
-    {record.sourceHost&&<small translate="no">{record.sourceHost}{record.pageLabel?` · ${record.pageLabel}`:''}</small>}
+    {record.sourceHost&&<small translate="no">{record.sourceHost}{pageLabel?` · ${pageLabel}`:''}</small>}
     <div className="source-links">
       {pdf&&<a href={pdf} target="_blank" rel="noopener noreferrer"><FileText size={17}/>Open original PDF<ExternalLink size={14}/></a>}
       {record.sourceUrl&&<a href={record.sourceUrl} target="_blank" rel="noopener noreferrer"><BookOpen size={17}/>Source website<ExternalLink size={14}/></a>}
