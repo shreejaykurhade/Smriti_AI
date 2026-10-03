@@ -32,7 +32,7 @@ def test_server_resolves_citations_only_from_official_registry(monkeypatch):
 def test_selected_language_reaches_answer_service_and_narration(monkeypatch,language):
     def completion(question,selected):
         assert selected==language and question=='Compare the works.'
-        return supported('Native-language answer fixture')
+        return supported(service.FALLBACKS[language])
     monkeypatch.setattr(service,'_completion',completion)
     packet=app.test_client().post('/api/ask',json={'question':'Compare the works.','language':language}).get_json()
     assert packet['language']==language and packet['mode']=='source-grounded-answer'
@@ -84,12 +84,12 @@ def test_timeout_and_missing_key_keep_existing_guide(monkeypatch):
 def test_answer_cache_does_not_mix_languages_and_uses_no_plain_question_key(monkeypatch):
     calls=[]
     def complete(question,language):
-        calls.append(language);return supported(language+' answer')
+        calls.append(language);return supported(service.FALLBACKS[language])
     monkeypatch.setattr(service,'_completion',complete)
     first=service.museum_answer('Compare the works.','en')
     first['citations'].clear()
     assert service.museum_answer('Compare the works.','en')['citations']
-    assert service.museum_answer('Compare the works.','mr')['answer']=='mr answer'
+    assert service.museum_answer('Compare the works.','mr')['answer']==service.FALLBACKS['mr']
     assert calls==['en','mr']
     assert all(len(key)==64 and 'Compare' not in key for key in service._cache)
 
@@ -117,3 +117,24 @@ def test_completion_contract_keeps_credentials_out_of_prompt_and_validates_trunc
     monkeypatch.setattr(service.urllib.request,'urlopen',request)
     with pytest.raises(ValueError,match='Incomplete'):
         service._completion('Compare the works.','mr')
+
+
+def test_mixed_regional_scripts_fall_back_to_native_guide(monkeypatch):
+    # Reproduces real Malayalam output containing Kannada words.
+    monkeypatch.setattr(service,'_completion',lambda *args:supported('ഡോ. അംബേദ്കർ ವಿನಿಮಯ ನೀತിയും സംബന്ധിച്ചുള്ള പഠനം അവതരിപ്പിച്ചു.'))
+    result=service.museum_answer('What did Ambedkar write about the rupee?','ml')
+    assert result['mode']=='curated-source-guide'
+    assert result['prepared_translation']
+
+
+def test_english_only_output_is_not_presented_as_regional_answer(monkeypatch):
+    monkeypatch.setattr(service,'_completion',lambda *args:supported())
+    result=service.museum_answer('What is social democracy?','hi')
+    assert result['mode']=='curated-source-guide' and 'लोकतंत्र' in result['answer']
+
+
+def test_compound_query_keeps_both_topic_sources_and_unknown_uses_all_records():
+    evidence=service._evidence_for('Compare caste and monetary policy.','en')
+    ids={record['id'] for record in evidence['records']}
+    assert {'annihilation-caste','problem-rupee'}<=ids
+    assert len(service._evidence_for('Unrecognised request.','mr')['records'])==13
